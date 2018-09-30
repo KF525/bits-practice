@@ -1,5 +1,4 @@
-class DupInt {
-  val integers = List(12, 21, 31, 5, 31, 5, 12)
+class BitXOr {
 
   def findDuplicate(ints: List[Int], duplicate: Int = 0): Int = ints match {
     case Nil => duplicate
@@ -13,3 +12,15 @@ class DupInt {
       case _ => xorExploration(num, timesToXOr - 1, xOr^num)
     }
 }
+
+/*
+Binary XOR Operator copies the bit if it is set in one operand but not both.
+A =   0011 1100
+B =   0000 1101
+A^B = 0011 0001
+
+so
+A =   0011 1100
+B =   0011 1100
+A^B = 0000 0000
+ */
